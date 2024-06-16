@@ -15,8 +15,9 @@ public class Q4 {
         double avg;
 
         if (1 <= cnt && cnt <= 100) {
+            st = new StringTokenizer(br.readLine());
+
             for (int i = 0; i < cnt; i++) {
-                st = new StringTokenizer(br.readLine());
                 sum += Integer.parseInt(st.nextToken());
             }
             avg = (double) sum / cnt;
