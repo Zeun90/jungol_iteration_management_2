@@ -3,20 +3,23 @@ package SelfAssessment;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Q4 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int input = Integer.parseInt(br.readLine());
-        int sum = 0;
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int input;
+        int cnt = 0;
 
-        if (0 < input && input <= 100) {
-            for (int i = 1; i <= input; i++) {
-                sum += i;
+        for (int i = 0; i < 10; i++) {
+            input = Integer.parseInt(st.nextToken());
+            if (input % 2 == 0) {
+                cnt++;
             }
         }
 
-        System.out.println(sum);
+        System.out.printf("입력받은 짝수는 %d개입니다.", cnt);
 
     }
 }
